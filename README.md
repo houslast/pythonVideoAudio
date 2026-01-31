@@ -1,5 +1,10 @@
 # Audio Editor
 
+https://github.com/houslast/pythonVideoAudio/blob/main/ddd.png
+https://github.com/houslast/pythonVideoAudio/blob/main/dfdf.png
+https://github.com/houslast/pythonVideoAudio/blob/main/dfdf.png
+https://github.com/houslast/pythonVideoAudio/blob/main/dsd.png
+
 Editor de áudio para sincronizar SFX com um vídeo e exportar o resultado.
 
 ## Requisitos
@@ -59,5 +64,6 @@ Quando dois clipes na mesma faixa se sobrepõem até esse tempo:
 ### Exportar MP3
 
 Em **Config**, use a seção de exportação para gerar MP3.
+
 
 
