@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "path": "backend/app/main.py",
+      "responsibility": "Cria a API FastAPI e serve o frontend estático."
+    },
+    {
+      "path": "backend/app/api/router.py",
+      "responsibility": "Agrupa rotas e aplica prefixos /api."
+    },
+    {
+      "path": "backend/app/api/routes/freesound.py",
+      "responsibility": "Endpoint de busca no Freesound com suporte a consulta em PT."
+    },
+    {
+      "path": "backend/app/services/query_mapper.py",
+      "responsibility": "Converte consulta PT para tags/termos compatíveis com Freesound."
+    },
+    {
+      "path": "backend/app/services/freesound_client.py",
+      "responsibility": "Cliente HTTP para Freesound APIv2."
+    },
+    {
+      "path": "backend/app/api/routes/sync.py",
+      "responsibility": "Upload temporário de vídeo e análise de movimento por trecho."
+    },
+    {
+      "path": "backend/app/services/video_motion.py",
+      "responsibility": "Extrai eventos de movimento (picos) via diferença de frames."
+    },
+    {
+      "path": "static/index.html",
+      "responsibility": "Layout principal (painéis, vídeo, timeline, abas)."
+    },
+    {
+      "path": "static/css/app.css",
+      "responsibility": "Tema dark e layout responsivo da aplicação."
+    },
+    {
+      "path": "static/js/app.js",
+      "responsibility": "Bootstrap do frontend e ligação entre vídeo, busca, timeline e mixer."
+    },
+    {
+      "path": "static/js/ui/search.js",
+      "responsibility": "Busca SFX, renderiza cards e habilita drag-and-drop para timeline."
+    },
+    {
+      "path": "static/js/ui/video.js",
+      "responsibility": "Importa vídeo local, exibe no player e envia para o backend."
+    },
+    {
+      "path": "static/js/ui/timeline/timeline.js",
+      "responsibility": "Orquestra estado, renderização e interações da timeline."
+    },
+    {
+      "path": "static/js/ui/timeline/renderer.js",
+      "responsibility": "Desenha timeline, clipes, playhead, fades e automação em canvas."
+    },
+    {
+      "path": "static/js/ui/timeline/audio_engine.js",
+      "responsibility": "Toca os clipes via WebAudio sincronizado com o vídeo."
+    },
+    {
+      "path": "static/js/ui/timeline/interactions/*.js",
+      "responsibility": "Interações: teclado, mouse, drop, sincronização e vídeo."
+    },
+    {
+      "path": "static/js/ui/mixer_panel.js",
+      "responsibility": "Tela 'Canais (Mixer)' com ganho/pan por faixa."
+    },
+    {
+      "path": "install.bat",
+      "responsibility": "Cria venv, instala dependências e opcionalmente cria .env com token."
+    },
+    {
+      "path": "run_server.bat",
+      "responsibility": "Instala dependências, inicia servidor e abre o navegador."
+    }
+  ]
+}
+
