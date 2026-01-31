@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Audio Editor</title>
+    <link rel="stylesheet" href="/static/css/app.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">Audio Editor</div>
+        <div class="transport">
+          <button id="btnPlayPause" class="btn">␣ Play/Pause</button>
+          <div class="time" id="timeReadout">00:00.000</div>
+          <div class="hint">
+            G: ganho · P: pan · Ctrl+Z: desfazer · Ctrl+Y: refazer · Del: deletar · R: recortar · Ctrl+C/V: copiar/colar
+          </div>
+        </div>
+        <div class="right">
+          <button id="btnSettings" class="btn">Config</button>
+          <button id="btnAddTrack" class="btn">+ Faixa</button>
+        </div>
+      </header>
+
+      <main class="main">
+        <aside class="panel left">
+          <div class="panelTitle">SFX (Freesound)</div>
+          <div class="searchRow">
+            <input id="searchInput" class="input" placeholder="Buscar em PT (ex.: passos na neve)" />
+            <button id="searchBtn" class="btn">Buscar</button>
+          </div>
+          <div class="panelBody" id="searchResults"></div>
+        </aside>
+
+        <section class="center">
+          <div class="videoBar">
+            <label class="fileBtn">
+              Abrir vídeo
+              <input id="videoPicker" type="file" accept="video/*" />
+            </label>
+            <div class="fileMeta" id="videoMeta"></div>
+          </div>
+          <div class="videoWrap">
+            <video id="video" class="video" controls></video>
+          </div>
+        </section>
+
+        <aside class="panel right">
+          <div class="tabs">
+            <button class="tab active" data-tab="mix">Mixagem</button>
+            <button class="tab" data-tab="mixer">Canais (Mixer)</button>
+          </div>
+          <div class="panelBody" id="rightPanelBody"></div>
+        </aside>
+      </main>
+
+      <footer class="timeline">
+        <div class="timelineHeader">
+          <div class="zoom">
+            <label>Zoom</label>
+            <input id="zoom" type="range" min="40" max="220" value="100" />
+          </div>
+          <div class="status" id="status"></div>
+        </div>
+        <div class="timelineBody" id="timelineRoot"></div>
+      </footer>
+    </div>
+
+    <div id="modalBackdrop" class="modalBackdrop" style="display: none;">
+      <div class="modal">
+        <div class="modalHeader">
+          <div class="modalTitle">Configurações</div>
+          <button id="btnCloseModal" class="btn">Fechar</button>
+        </div>
+        <div class="modalBody">
+          <div class="modalSectionTitle">Freesound</div>
+          <div class="formRow">
+            <div class="formLabel">API key (token)</div>
+            <input id="cfgFreesoundToken" class="input" placeholder="Cole o token aqui (salvo no navegador)" />
+          </div>
+          <div class="tableWrap">
+            <table class="table" id="cfgTable">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Client id</th>
+                  <th>Client secret / Api key</th>
+                  <th>Redirect url</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="actionsRow">
+            <button id="btnAddCfgRow" class="btn">+ Adicionar</button>
+            <button id="btnSaveCfg" class="btn">Salvar</button>
+          </div>
+
+          <div class="modalSectionTitle">Exportação</div>
+          <div id="exportPanel"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/static/js/app.js"></script>
+  </body>
+</html>
