@@ -1,9 +1,9 @@
 # Audio Editor
 
-https://github.com/houslast/pythonVideoAudio/blob/main/ddd.png
-https://github.com/houslast/pythonVideoAudio/blob/main/dfdf.png
-https://github.com/houslast/pythonVideoAudio/blob/main/dfdf.png
-https://github.com/houslast/pythonVideoAudio/blob/main/dsd.png
+<img width="1915" height="908" alt="dfdf" src="https://github.com/user-attachments/assets/8b1e4445-434a-4001-a330-222ef613d9c4" />
+<img width="1019" height="318" alt="dsd" src="https://github.com/user-attachments/assets/21e17f1c-7b40-4347-848f-d2d81de7e8ec" />
+
+
 
 Editor de áudio para sincronizar SFX com um vídeo e exportar o resultado.
 
@@ -64,6 +64,7 @@ Quando dois clipes na mesma faixa se sobrepõem até esse tempo:
 ### Exportar MP3
 
 Em **Config**, use a seção de exportação para gerar MP3.
+
 
 
 
