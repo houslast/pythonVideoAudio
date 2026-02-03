@@ -50,6 +50,7 @@ Depois, abra no navegador:
 - R (ou Ctrl+K): recortar no playhead
 - G: automação de ganho
 - P: automação de pan
+- S: menu de sincronizacao
 - Duplo clique no clipe: cria ponto de automação
 
 ### Mixagem (transição gradual)
@@ -64,6 +65,7 @@ Quando dois clipes na mesma faixa se sobrepõem até esse tempo:
 ### Exportar MP3
 
 Em **Config**, use a seção de exportação para gerar MP3.
+
 
 
 
